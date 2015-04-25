@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | blogau</title>
+  <title>Windows 下整合 apache、php 和 mysql | blogau</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="01.安装 Apache HTTP Server
+02.安装/解压 PHP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://gauzeehom.github.io/2015/04/25/hello-world/index.html">
+<meta property="og:title" content="Windows 下整合 apache、php 和 mysql">
+<meta property="og:url" content="http://gauzeehom.github.io/2011/07/14/windows-e4-b8-8b-e6-95-b4-e5-90-88-apache-e3-80-81php-e5-92-8c-mysql/index.html">
 <meta property="og:site_name" content="blogau">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta property="og:description" content="01.安装 Apache HTTP Server
+02.安装/解压 PHP">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="Windows 下整合 apache、php 和 mysql">
+<meta name="twitter:description" content="01.安装 Apache HTTP Server
+02.安装/解压 PHP">
   
     <link rel="alternative" href="/atom.xml" title="blogau" type="application/atom+xml">
   
@@ -62,12 +62,16 @@ Quick">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-windows-e4-b8-8b-e6-95-b4-e5-90-88-apache-e3-80-81php-e5-92-8c-mysql" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/04/25/hello-world/" class="article-date">
-  <time datetime="2015-04-25T10:51:05.415Z" itemprop="datePublished">2015-04-25</time>
+    <a href="/2011/07/14/windows-e4-b8-8b-e6-95-b4-e5-90-88-apache-e3-80-81php-e5-92-8c-mysql/" class="article-date">
+  <time datetime="2011-07-14T02:15:50.000Z" itemprop="datePublished">2011-07-14</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习记录/">学习记录</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -76,7 +80,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Windows 下整合 apache、php 和 mysql
     </h1>
   
 
@@ -84,20 +88,45 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        <p>01.安装 Apache HTTP Server</p>
+<p>02.安装/解压 PHP<br><a id="more"></a><br>03.配置 Apache（httpd.conf）对 PHP 的支持</p>
+<blockquote>
+<h1 id="load_the_PHP_module_for_Apache_2-x">load the PHP module for Apache 2.x</h1><h1 id="Users_of_Apache_2-2_should_note_that_the_DLL_file_for_Apache_2-2_is_named">Users of Apache 2.2 should note that the DLL file for Apache 2.2 is named</h1><h1 id="php5apache2_2-dll_rather_than_php5apache2-dll">php5apache2_2.dll rather than php5apache2.dll</h1><h1 id="and_is_available_only_for_PHP_5-2-0_and_later-">and is available only for PHP 5.2.0 and later.</h1><p>LoadModule php5_module “c:/php5/php5apache2.dll”</p>
+<h1 id="enable_PHP_handling_of_any_file_that_has_a_-php_extension,_even_if_there_are_other_file">enable PHP handling of any file that has a .php extension, even  if there are other file</h1><h1 id="extensions-（For_example,_example-php-txt）">extensions.（For example, example.php.txt）</h1><h1 id="To_ensure_that_only_files_that_end_in_-php_are_executed,_use_the_following">To ensure that only files that end in .php are executed, use the following</h1><h1 id="configuration_instead:">configuration instead:</h1><h1 id="&lt;FilesMatch_-php$&gt;">&lt;FilesMatch .php$&gt;</h1><h1 id="SetHandler_application/x-httpd-php">SetHandler application/x-httpd-php</h1><h1 id="&lt;/FilesMatch&gt;">&lt;/FilesMatch&gt;</h1><p>AddHandler application/x-httpd-php .php</p>
+<h1 id="configure_the_path_to_php-ini">configure the path to php.ini</h1><p>PHPIniDir “C:/php5”</p>
+</blockquote>
+<p>04.显示错误信息</p>
+<blockquote>
+<p>error_reporting  =  …</p>
+<p>display_errors = On</p>
+</blockquote>
+<p>05.配置 PHP（php.ini） 以连接 MySql</p>
+<blockquote>
+<p>extension_dir = “c:/php5/ext”</p>
+<p>extension=php_mysql.dll</p>
+</blockquote>
+<p>httpd.exe 应用程序错误，该内存不能为 read 的解决方法：<br>将C:\php5文件夹下的 libmysql.dll 和 php5ts.dll 拷到 C:\WINDOWS\system32 下</p>
+<h6 id="#">#</h6><p>转：PHP Notice: undefined index 完美解决方法</p>
+<p>平时用$_GET[‘xx’] 取得参数值时，如果之前不加判断在未传进参数时会出现这样的警告:</p>
+<p>PHP Notice: undefined index xxx</p>
+<p>虽然可以通过设置错误显示方式来隐藏这个提示，但是这样也有隐患，就是在服务器的日志中会记录这些提示，导致日志文件异常庞大！<br>下面是引用网上流行的解决方法：</p>
+<p>首先，这个不是错误，是warning。所以如果服务器不能改，每个变量使用前应当先定义。</p>
+<p>方法1：服务器配置修改<br>修改php.ini配置文件，error_reporting = E_ALL &amp; ~E_NOTICE</p>
+<p>方法2：对变量进行初始化，规范书写（比较烦琐，因为有大量的变量）。但还没有找到好定义方法，望大家指教</p>
+<p>方法3：每个文件头部加上：error_reporting(0); 如果不行，只有打开php.ini,找到display_errors，设置为display_errors = Off。以后任何错误都不会提示。</p>
+<p>方法4 ：做判断：isset($_GET[“page”]) if-else判断<br>或者加上’@’表示这行如果有错误或是警告不要輸出<br>如：@$page=$_GET[“page”]</p>
+<p>方法5：file1.php文件把$xx变量付一个值，用post 传递给file2.php，<br>如果file2.php没有$xx的定义，而直接使用$yy=$xx; 系统就会报错：”undifined variaable $xx”, 如果file2.php的文件开始用$xx=””;定义，那么file1.php的$xx值就传不过来了！<br>file2.php里可以这样<br>if(!isset($xx)) $xx=””;</p>
+<p>但Jones认为，这些方法都不太方便。你不妨这样解决：</p>
+<p>定义一个函数：</p>
+<p>function _get($str){<br>$val = !empty($_GET[$str]) ? $_GET[$str] : null;<br>return $val;<br>}</p>
+<p>然后在用的时候，直接用 _get(‘str’) 代替 $_GET[‘str’] 就行啦~</p>
+<p>是不是很方便？</p>
+<p>原文链接：<a href="http://shuai.be/archives/php-undefined-index/" target="_blank" rel="external">http://shuai.be/archives/php-undefined-index/</a></p>
+<h6 id="#-1">#</h6>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://gauzeehom.github.io/2015/04/25/hello-world/" data-id="ci8x0xece000p72pv5pnpnnly" class="article-share-link">Share</a>
+      <a data-url="http://gauzeehom.github.io/2011/07/14/windows-e4-b8-8b-e6-95-b4-e5-90-88-apache-e3-80-81php-e5-92-8c-mysql/" data-id="ci8x0xea8000672pv2tkg7vnk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -106,19 +135,19 @@ Quick">
     
 <nav id="article-nav">
   
-    <a href="/2015/04/25/aboutme/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2011/07/15/e5-9c-a8-jsp-e9-a1-b5-e9-9d-a2-e3-80-81js-e8-84-9a-e6-9c-ac-e4-b8-ad-e8-8e-b7-e5-8f-96-e6-9c-8d-e5-8a-a1-e5-99-a8-e4-b8-8a-e7-9a-84-e9-a1-b9-e7-9b-ae-e7-9a-84-e6-a0-b9-e7-9b-ae-e5-bd-95/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          aboutme
+          在 JSP 页面、JS 脚本中获取服务器上的项目的根目录
         
       </div>
     </a>
   
   
-    <a href="/2013/08/21/gae-e5-ad-a6-e4-b9-a0-e7-ac-94-e8-ae-b0-ef-bc-88-e4-bb-a5-e9-83-a8-e7-bd-b2micolog-e4-b8-ba-e4-be-8b-ef-bc-89/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2011/07/12/gae-e5-ad-a6-e4-b9-a0-e7-ac-94-e8-ae-b0-ef-bc-88-e4-bb-a5-e9-83-a8-e7-bd-b2-micolog-e4-b8-ba-e4-be-8b-ef-bc-89/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">GAE使用（以部署micolog为例）</div>
+      <div class="article-nav-title">GAE 学习笔记（以部署 micolog 为例）</div>
     </a>
   
 </nav>

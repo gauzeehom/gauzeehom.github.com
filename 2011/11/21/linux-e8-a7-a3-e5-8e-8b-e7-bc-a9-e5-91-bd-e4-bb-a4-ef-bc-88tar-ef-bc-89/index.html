@@ -3,20 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | blogau</title>
+  <title>Linux 解压缩命令（tar） | blogau</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="-c: 建立压缩档案-x：解压-t：查看内容-r：向压缩归档文件末尾追加文件-u：更新原压缩包中的文件这五个是独立的参数，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://gauzeehom.github.io/2015/04/25/hello-world/index.html">
+<meta property="og:title" content="Linux 解压缩命令（tar）">
+<meta property="og:url" content="http://gauzeehom.github.io/2011/11/21/linux-e8-a7-a3-e5-8e-8b-e7-bc-a9-e5-91-bd-e4-bb-a4-ef-bc-88tar-ef-bc-89/index.html">
 <meta property="og:site_name" content="blogau">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta property="og:description" content="-c: 建立压缩档案-x：解压-t：查看内容-r：向压缩归档文件末尾追加文件-u：更新原压缩包中的文件这五个是独立的参数，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="Linux 解压缩命令（tar）">
+<meta name="twitter:description" content="-c: 建立压缩档案-x：解压-t：查看内容-r：向压缩归档文件末尾追加文件-u：更新原压缩包中的文件这五个是独立的参数，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。">
   
     <link rel="alternative" href="/atom.xml" title="blogau" type="application/atom+xml">
   
@@ -62,12 +59,16 @@ Quick">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-linux-e8-a7-a3-e5-8e-8b-e7-bc-a9-e5-91-bd-e4-bb-a4-ef-bc-88tar-ef-bc-89" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/04/25/hello-world/" class="article-date">
-  <time datetime="2015-04-25T10:51:05.415Z" itemprop="datePublished">2015-04-25</time>
+    <a href="/2011/11/21/linux-e8-a7-a3-e5-8e-8b-e7-bc-a9-e5-91-bd-e4-bb-a4-ef-bc-88tar-ef-bc-89/" class="article-date">
+  <time datetime="2011-11-21T07:52:59.000Z" itemprop="datePublished">2011-11-21</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习记录/">学习记录</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -76,7 +77,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Linux 解压缩命令（tar）
     </h1>
   
 
@@ -84,20 +85,46 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>-c: 建立压缩档案<br>-x：解压<br>-t：查看内容<br>-r：向压缩归档文件末尾追加文件<br>-u：更新原压缩包中的文件<br>这五个是独立的参数，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。<br><a id="more"></a><br>下面的参数（部分，不全）是根据需要在压缩或解压档案时可选的：<br>-z：有gzip属性的<br>-j：有bz2属性的<br>-Z：有compress属性的<br>-v：显示所有过程<br>-O：将文件解开到标准输出</p>
+<p>下面的参数是必须的：<br>-f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名。</p>
+<p>一些例子：</p>
+<blockquote>
+<h1 id="tar_-cf_all-tar_*-jpg">tar -cf all.tar *.jpg</h1><p>这条命令是将所有.jpg的文件打成一个名为all.tar的包。-c是表示产生新的包，-f指定包的文件名。</p>
+<h1 id="tar_-rf_all-tar_*-gif">tar -rf all.tar *.gif</h1><p>这条命令是将所有.gif的文件增加到all.tar的包里面去。-r是表示增加文件的意思。</p>
+<h1 id="tar_-uf_all-tar_logo-gif">tar -uf all.tar logo.gif</h1><p>这条命令是更新原来tar包all.tar中的logo.gif文件，-u是表示更新文件的意思。</p>
+<h1 id="tar_-tf_all-tar">tar -tf all.tar</h1><p>这条命令是列出all.tar包中所有文件，-t是列出文件的意思。</p>
+<h1 id="tar_-xf_all-tar">tar -xf all.tar</h1><p>这条命令是解出all.tar包中所有文件，-x是解开的意思</p>
+</blockquote>
+<p>打包/压缩 ：</p>
+<blockquote>
+<p>//将目录里所有jpg文件打包成jpg.tar</p>
+<p>tar –cvf jpg.tar *.jpg</p>
+<p>//将目录里所有jpg文件打包成jpg.tar后，并且将其用gzip 压缩，生成一个gzip压缩过的包，命名为jpg.tar.gz</p>
+<p>tar –czf jpg.tar.gz *.jpg</p>
+<p>//将目录里所有jpg文件打包成jpg.tar后，并且将其用bzip2压缩，生成一个bzip2压缩过的包，命名为jpg.tar.bz2</p>
+<p>tar –cjf jpg.tar.bz2 *.jpg</p>
+<p>//将目录里所有jpg文件打包成jpg.tar后，并且将其用compress压缩，生成一个umcompress压缩过的包，命名为jpg.tar.Z</p>
+<p>tar –cZf jpg.tar.Z *.jpg</p>
+<p>rar a jpg.rar *.jpg //rar格式的压缩，需要先下载rar for linux</p>
+<p>zip jpg.zip *.jpg //zip格式的压缩，需要先下载zip for linux</p>
+</blockquote>
+<p>解包/解压缩：</p>
+<blockquote>
+<p>tar –xvf file.tar //解tar包</p>
+<p>tar -xzvf file.tar.gz //解压tar.gz</p>
+<p>tar -xjvf file.tar.bz2 //解压tar.bz2</p>
+<p>tar –xZvf file.tar.Z //解压tar.Z</p>
+<p>unrar e file.rar //解压rar</p>
+<p>unzip file.zip //解压zip</p>
+</blockquote>
+<p>其他解压：<br><em>.tgz 用 tar –xzf 解压
+</em>.gz 用 gzip -d 或者 gunzip 解压<br><em>.bz2 用 bzip2 -d 或者 bunzip2 解压
+</em>.Z 用 uncompress 解压</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://gauzeehom.github.io/2015/04/25/hello-world/" data-id="ci8x0xece000p72pv5pnpnnly" class="article-share-link">Share</a>
+      <a data-url="http://gauzeehom.github.io/2011/11/21/linux-e8-a7-a3-e5-8e-8b-e7-bc-a9-e5-91-bd-e4-bb-a4-ef-bc-88tar-ef-bc-89/" data-id="ci8x0xebl000j72pv1q9swy0q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -106,19 +133,19 @@ Quick">
     
 <nav id="article-nav">
   
-    <a href="/2015/04/25/aboutme/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2011/11/29/e5-86-8d-e8-b0-88-shel-l-e4-b9-8b-e2-80-9cdevnull-21-e2-80-9d/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          aboutme
+          再谈 shel l之 “&gt;/dev/null 2&gt;&amp;1”
         
       </div>
     </a>
   
   
-    <a href="/2013/08/21/gae-e5-ad-a6-e4-b9-a0-e7-ac-94-e8-ae-b0-ef-bc-88-e4-bb-a5-e9-83-a8-e7-bd-b2micolog-e4-b8-ba-e4-be-8b-ef-bc-89/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2011/09/21/e8-bd-ac-ef-bc-9a-e5-a4-a7-e5-b9-85-e4-bc-98-e5-8c-96-myeclipse-e7-9a-84-e9-80-9f-e5-ba-a6/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">GAE使用（以部署micolog为例）</div>
+      <div class="article-nav-title">转：大幅优化 myeclipse 的速度</div>
     </a>
   
 </nav>

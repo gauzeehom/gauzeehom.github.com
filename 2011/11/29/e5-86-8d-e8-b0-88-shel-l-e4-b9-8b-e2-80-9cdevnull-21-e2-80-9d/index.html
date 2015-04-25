@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | blogau</title>
+  <title>再谈 shel l之 “&gt;/dev/null 2&gt;&amp;1” | blogau</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="【转载时请以超链接形式标明文章出处和作者信息及本声明】原文链接： http://www.ixdba.net/a/os/linux/2010/0422/35.html
+今天在自己的一个技术群中又被问道了这么一个问题，于是又通俗的解释了一下，做个记录，大家看看解释是否清楚！shell中可能经常能看到：&amp;gt;/dev/null 2&amp;gt;&amp;amp;1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://gauzeehom.github.io/2015/04/25/hello-world/index.html">
+<meta property="og:title" content="再谈 shel l之 “>/dev/null 2>&1”">
+<meta property="og:url" content="http://gauzeehom.github.io/2011/11/29/e5-86-8d-e8-b0-88-shel-l-e4-b9-8b-e2-80-9cdevnull-21-e2-80-9d/index.html">
 <meta property="og:site_name" content="blogau">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta property="og:description" content="【转载时请以超链接形式标明文章出处和作者信息及本声明】原文链接： http://www.ixdba.net/a/os/linux/2010/0422/35.html
+今天在自己的一个技术群中又被问道了这么一个问题，于是又通俗的解释了一下，做个记录，大家看看解释是否清楚！shell中可能经常能看到：&amp;gt;/dev/null 2&amp;gt;&amp;amp;1">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="再谈 shel l之 “>/dev/null 2>&1”">
+<meta name="twitter:description" content="【转载时请以超链接形式标明文章出处和作者信息及本声明】原文链接： http://www.ixdba.net/a/os/linux/2010/0422/35.html
+今天在自己的一个技术群中又被问道了这么一个问题，于是又通俗的解释了一下，做个记录，大家看看解释是否清楚！shell中可能经常能看到：&amp;gt;/dev/null 2&amp;gt;&amp;amp;1">
   
     <link rel="alternative" href="/atom.xml" title="blogau" type="application/atom+xml">
   
@@ -62,12 +62,16 @@ Quick">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-e5-86-8d-e8-b0-88-shel-l-e4-b9-8b-e2-80-9cdevnull-21-e2-80-9d" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/04/25/hello-world/" class="article-date">
-  <time datetime="2015-04-25T10:51:05.415Z" itemprop="datePublished">2015-04-25</time>
+    <a href="/2011/11/29/e5-86-8d-e8-b0-88-shel-l-e4-b9-8b-e2-80-9cdevnull-21-e2-80-9d/" class="article-date">
+  <time datetime="2011-11-29T02:19:26.000Z" itemprop="datePublished">2011-11-29</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习记录/">学习记录</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -76,7 +80,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      再谈 shel l之 “&gt;/dev/null 2&gt;&amp;1”
     </h1>
   
 
@@ -84,20 +88,12 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        <p><span style="color: red;">【转载时请以超链接形式标明文章出处和作者信息及本声明】<br>原文链接： <a href="http://www.ixdba.net/a/os/linux/2010/0422/35.html" title="http://www.ixdba.net/a/os/linux/2010/0422/35.html" target="_blank" rel="external">http://www.ixdba.net/a/os/linux/2010/0422/35.html</a></span></p>
+<table width="100%"><br><tbody><br><tr><br><td><br><div><br><br><span style="font-family: Tahoma; font-size: x-small;">今天在自己的一个技术群中又被问道了这么一个问题，于是又通俗的解释了一下，做个记录，大家看看解释是否清楚！</span><br><br><span style="font-family: Tahoma; font-size: x-small;">shell中可能经常能看到：&gt;/dev/null 2&gt;&amp;1<a id="more"></a></span><br><br><span style="font-family: Tahoma; font-size: x-small;">命令的结果可以通过%&gt;的形式来定义输出</span><br><br><span style="font-family: Tahoma; font-size: x-small;">分解这个组合：“&gt;/dev/null 2&gt;&amp;1” 为五部分。</span><br><br><span style="color: #ff6600; font-family: Tahoma; font-size: x-small;">1：&gt; 代表重定向到哪里，例如：echo “123” &gt; /home/123.txt<br>2：/dev/null 代表空设备文件<br>3：2&gt; 表示stderr标准错误<br>4：&amp; 表示等同于的意思，2&gt;&amp;1，表示2的输出重定向等同于1<br>5：1 表示stdout标准输出，系统默认值是1，所以”&gt;/dev/null”等同于 “1&gt;/dev/null”</span><br><br><span style="font-family: Tahoma; font-size: x-small;">因此，&gt;/dev/null 2&gt;&amp;1也可以写成“1&gt; /dev/null 2&gt; &amp;1”</span><br><br><span style="font-family: Tahoma; font-size: x-small;">那么本文标题的语句执行过程为：<br>1&gt;/dev/null ：首先表示标准输出重定向到空设备文件，也就是不输出任何信息到终端，说白了就是不显示任何信息。<br>2&gt;&amp;1 ：接着，标准错误输出重定向 到 标准输出，因为之前标准输出已经重定向到了空设备文件，所以标准错误输出也重定向到空设备文件。</span><br><br><span style="font-family: Tahoma; font-size: x-small;">说清楚了吗，大家理解下吧！</span><br><br><span style="color: #ff6600; font-family: Tahoma; font-size: x-small;">顺便对比述说下这么用的好处！</span><br><br><span style="font-family: Tahoma; font-size: x-small;">   最常用的方式有：</span><br><br><span style="color: #ff0000; font-family: Tahoma; font-size: x-small;">command &gt; file 2&gt;file  与command &gt; file 2&gt;&amp;1</span><br><br><span style="font-family: Tahoma; font-size: x-small;">它们 有什么不同的地方吗？</span><br><span style="font-family: Tahoma; font-size: x-small;">      首先command &gt; file 2&gt;file 的意思是将命令所产生的标准输出信息,和错误的输出信息送到file 中.command  &gt; file 2&gt;file 这样的写法,stdout和stderr都直接送到file中, file会被打开两次,这样stdout和stderr会互相覆盖,这样写相当使用了FD1和FD2两个同时去抢占file 的管道。<br>而command &gt;file 2&gt;&amp;1 这条命令就将stdout直接送向file, stderr 继承了FD1管道后,再被送往file,此时,file 只被打开了一次,也只使用了一个管道FD1,它包括了stdout和stderr的内容。<br>从IO效率上,前一条命令的效率要比后面一条的命令效率要低,所以在编写shell脚本的时候,较多的时候我们会command &gt; file 2&gt;&amp;1 这样的写法。</span><br><br></div><br>(责任编辑：南非蚂蚁)</td><br></tr><br></tbody><br></table>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://gauzeehom.github.io/2015/04/25/hello-world/" data-id="ci8x0xece000p72pv5pnpnnly" class="article-share-link">Share</a>
+      <a data-url="http://gauzeehom.github.io/2011/11/29/e5-86-8d-e8-b0-88-shel-l-e4-b9-8b-e2-80-9cdevnull-21-e2-80-9d/" data-id="ci8x0xedu001572pvev2zjpk2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -106,19 +102,19 @@ Quick">
     
 <nav id="article-nav">
   
-    <a href="/2015/04/25/aboutme/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2012/08/11/jsp-e9-a1-b5-e9-9d-a2-ef-bc-8c-e6-88-aa-e5-8f-96-e4-b8-a4-e4-bd-8d-e5-b0-8f-e6-95-b0/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          aboutme
+          jsp页面，截取两位小数
         
       </div>
     </a>
   
   
-    <a href="/2013/08/21/gae-e5-ad-a6-e4-b9-a0-e7-ac-94-e8-ae-b0-ef-bc-88-e4-bb-a5-e9-83-a8-e7-bd-b2micolog-e4-b8-ba-e4-be-8b-ef-bc-89/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2011/11/21/linux-e8-a7-a3-e5-8e-8b-e7-bc-a9-e5-91-bd-e4-bb-a4-ef-bc-88tar-ef-bc-89/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">GAE使用（以部署micolog为例）</div>
+      <div class="article-nav-title">Linux 解压缩命令（tar）</div>
     </a>
   
 </nav>

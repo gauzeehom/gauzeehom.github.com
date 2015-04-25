@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | blogau</title>
+  <title>db2 导入、导出 | blogau</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="1 导出表结构和数据◆第一步：打开DB2的命令行工具，在DB2安装目录的BIN文件夹下新建一个文件夹data，并且进入该目录。创建该目录： mkdir data进入该目录： cd data
+◆第二步：导出表结构，命令行如下：db2look -d dbname -e -a -x -i username -w passWord -o ddlfile.sql执行成功之后，会在刚才新建的文件夹下找到该sq">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://gauzeehom.github.io/2015/04/25/hello-world/index.html">
+<meta property="og:title" content="db2 导入、导出">
+<meta property="og:url" content="http://gauzeehom.github.io/2012/10/17/db2-e5-af-bc-e5-85-a5-e3-80-81-e5-af-bc-e5-87-ba/index.html">
 <meta property="og:site_name" content="blogau">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta property="og:description" content="1 导出表结构和数据◆第一步：打开DB2的命令行工具，在DB2安装目录的BIN文件夹下新建一个文件夹data，并且进入该目录。创建该目录： mkdir data进入该目录： cd data
+◆第二步：导出表结构，命令行如下：db2look -d dbname -e -a -x -i username -w passWord -o ddlfile.sql执行成功之后，会在刚才新建的文件夹下找到该sq">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="db2 导入、导出">
+<meta name="twitter:description" content="1 导出表结构和数据◆第一步：打开DB2的命令行工具，在DB2安装目录的BIN文件夹下新建一个文件夹data，并且进入该目录。创建该目录： mkdir data进入该目录： cd data
+◆第二步：导出表结构，命令行如下：db2look -d dbname -e -a -x -i username -w passWord -o ddlfile.sql执行成功之后，会在刚才新建的文件夹下找到该sq">
   
     <link rel="alternative" href="/atom.xml" title="blogau" type="application/atom+xml">
   
@@ -62,12 +62,16 @@ Quick">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-db2-e5-af-bc-e5-85-a5-e3-80-81-e5-af-bc-e5-87-ba" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/04/25/hello-world/" class="article-date">
-  <time datetime="2015-04-25T10:51:05.415Z" itemprop="datePublished">2015-04-25</time>
+    <a href="/2012/10/17/db2-e5-af-bc-e5-85-a5-e3-80-81-e5-af-bc-e5-87-ba/" class="article-date">
+  <time datetime="2012-10-17T07:43:14.000Z" itemprop="datePublished">2012-10-17</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习记录/">学习记录</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -76,7 +80,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      db2 导入、导出
     </h1>
   
 
@@ -84,20 +88,20 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>1 导出表结构和数据<br>◆第一步：打开DB2的命令行工具，在DB2安装目录的BIN文件夹下新建一个文件夹data，并且进入该目录。<br>创建该目录： mkdir data<br>进入该目录： cd data</p>
+<p>◆第二步：导出表结构，命令行如下：<br>db2look -d dbname -e -a -x -i username -w passWord -o ddlfile.sql<br>执行成功之后，会在刚才新建的文件夹下找到该sql文件。</p>
+<p>◆第三步：导出数据，命令行如下：<br>db2move databasename export -u username -p password<br>至此，导出数据结束。<a id="more"></a></p>
+<p>2导出表中数据<br>export to [filename.ixf] of ixf select [字段(例: <em> or col1, col2, col3)] from [table];<br>export to [filename.ixf] of del select [字段(例: </em> or col1, col2, col3)] from [table];</p>
+<p>3导入表的数据<br>import from [filename.ixf] of ixf insert into [table];<br>load from [filename.ixf] of ixf insert into [table];<br>load from [filename.ixf] of ixf replace into [table]; //装入数据前，先删除已存在记录<br>load from [filename.ixf] of ixf restart into [table]; //当装入失败时，重新执行，并记录导出结果和错误信息</p>
+<p>import from [filename.ixf] of ixf savecount 1000 messages [msgfile.txt] insert into [table]; //其中，savecount表示完成每1000条操作，记录一次</p>
+<p>存在自增长字段的数据导入：<br>load from [filename.ixf] of ixf modified by identityignore insert into [table]; //加入modified by identityignore</p>
+<p>解除装入数据时，发生的检查挂起:<br>SET INTEGRITY FOR [table] CHECK IMMEDIATE UNCHECKED;<br>命令只对数据通过约束检查的表有效，如果执行还不能解除，有必要检查数据的完整性，是否不符合约束条件，并试图重新整理数据，再执行装入操作</p>
+<p>性能上load优于import（load 需要更多的权限）</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://gauzeehom.github.io/2015/04/25/hello-world/" data-id="ci8x0xece000p72pv5pnpnnly" class="article-share-link">Share</a>
+      <a data-url="http://gauzeehom.github.io/2012/10/17/db2-e5-af-bc-e5-85-a5-e3-80-81-e5-af-bc-e5-87-ba/" data-id="ci8x0xee9001b72pv255kvm23" class="article-share-link">Share</a>
       
       
     </footer>
@@ -106,19 +110,19 @@ Quick">
     
 <nav id="article-nav">
   
-    <a href="/2015/04/25/aboutme/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2012/12/12/e8-8e-b7-e5-8f-96-e6-9c-ac-e6-9c-ba-ip-e5-9c-b0-e5-9d-80/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          aboutme
+          获取本机 IP 地址
         
       </div>
     </a>
   
   
-    <a href="/2013/08/21/gae-e5-ad-a6-e4-b9-a0-e7-ac-94-e8-ae-b0-ef-bc-88-e4-bb-a5-e9-83-a8-e7-bd-b2micolog-e4-b8-ba-e4-be-8b-ef-bc-89/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2012/10/17/db2-command/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">GAE使用（以部署micolog为例）</div>
+      <div class="article-nav-title">db2 command</div>
     </a>
   
 </nav>

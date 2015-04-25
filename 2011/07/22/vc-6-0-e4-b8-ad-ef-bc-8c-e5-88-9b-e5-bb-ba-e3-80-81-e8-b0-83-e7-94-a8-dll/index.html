@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>VC 6.0中，创建、调用 dll | blogau</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="参考链接：如何使用VC6.0创建DLL用VC6.0创建和调用win32 dll
+使用 VC6.0 生成 DLL01.新建项目 “Win32 Dynamic-Link Library”，输入项目名称，确定后选择 “A simple DLL project” 点击“完成”。以下为cpp文件自动生成的代码：
+
+include “stdafx.h”BOOL APIENTRY DllMain( HANDLE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VC 6.0中，创建、调用 dll">
+<meta property="og:url" content="http://gauzeehom.github.io/2011/07/22/vc-6-0-e4-b8-ad-ef-bc-8c-e5-88-9b-e5-bb-ba-e3-80-81-e8-b0-83-e7-94-a8-dll/index.html">
+<meta property="og:site_name" content="blogau">
+<meta property="og:description" content="参考链接：如何使用VC6.0创建DLL用VC6.0创建和调用win32 dll
+使用 VC6.0 生成 DLL01.新建项目 “Win32 Dynamic-Link Library”，输入项目名称，确定后选择 “A simple DLL project” 点击“完成”。以下为cpp文件自动生成的代码：
+
+include “stdafx.h”BOOL APIENTRY DllMain( HANDLE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VC 6.0中，创建、调用 dll">
+<meta name="twitter:description" content="参考链接：如何使用VC6.0创建DLL用VC6.0创建和调用win32 dll
+使用 VC6.0 生成 DLL01.新建项目 “Win32 Dynamic-Link Library”，输入项目名称，确定后选择 “A simple DLL project” 点击“完成”。以下为cpp文件自动生成的代码：
+
+include “stdafx.h”BOOL APIENTRY DllMain( HANDLE">
+  
+    <link rel="alternative" href="/atom.xml" title="blogau" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">blogau</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://gauzeehom.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vc-6-0-e4-b8-ad-ef-bc-8c-e5-88-9b-e5-bb-ba-e3-80-81-e8-b0-83-e7-94-a8-dll" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2011/07/22/vc-6-0-e4-b8-ad-ef-bc-8c-e5-88-9b-e5-bb-ba-e3-80-81-e8-b0-83-e7-94-a8-dll/" class="article-date">
+  <time datetime="2011-07-22T06:27:25.000Z" itemprop="datePublished">2011-07-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习记录/">学习记录</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      VC 6.0中，创建、调用 dll
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>参考链接：<br><a href="http://www.cnblogs.com/qnbs1/articles/1743322.html" target="_blank" rel="external">如何使用VC6.0创建DLL</a><br><a href="http://hi.baidu.com/324280429/blog/item/35aa1c394b05a6fb3a87ceec.html" target="_blank" rel="external">用VC6.0创建和调用win32 dll</a></p>
+<h2 id="使用_VC6-0_生成_DLL">使用 VC6.0 生成 DLL</h2><p>01.新建项目 “Win32 Dynamic-Link Library”，输入项目名称，确定后选择 “A simple DLL project” 点击“完成”。<br>以下为cpp文件自动生成的代码：</p>
+<blockquote>
+<h1 id="include_“stdafx-h”">include “stdafx.h”</h1><p>BOOL APIENTRY DllMain( HANDLE hModule, DWORD  ul_reason_for_call,</p>
+<p>LPVOID lpReserved)</p>
+<p>{</p>
+<p>return TRUE;</p>
+<p>}<br><a id="more"></a><br>02.编辑cpp文件：<br>在#include “stdafx.h”的下一行加入<br>extern “C” __declspec(dllexport) int fun(int a, int  b);</p>
+<p>/*</p>
+<p>这是C格式导出函数;</p>
+<p>这种写法一般用在C++写的DLL中，指按C的规则导出这个函数，否则导出的函数会很怪;</p>
+<p>加上 extern  “C” 表示按标准C格式导出函数.如果去掉仅兼容C++;</p>
+<p>其中 int fun(int a, int b) 这部分代码是我们想用 dll 实现的函数原型声明</p>
+<p>如果还想加入其他的可以继续加入 extern “C” __declspec(dllexport) int fun1(int a, int b);</p>
+<p>*/<br>DllMain 是 DLL 的默认入口函数，类似于C语言的main函数，该例子无需修改此处，在 DllMain 的后面加入：<br>int fun(int a,int b)</p>
+<p>{</p>
+<p>return a+b;</p>
+<p>}<br>这就是我们想用 DLL 实现的函数的定义，build 之后就会在 debug 目录下生成我们想要的 dll 文件</p>
+</blockquote>
+<h2 id="调用_DLL">调用 DLL</h2><p>01.新建一个 Win32 Console Application 工程，把刚才生成的 dll 文件拷贝到工程的根目录下<br>02.在 stdafx.h 文件中加入：#include &lt;windows.h&gt;<br>03.编辑cpp文件：</p>
+<blockquote>
+<h1 id="include_“stdafx-h”-1">include “stdafx.h”</h1><p>typedef int (*PFUN)(int,int);</p>
+<p>void main()</p>
+<p>{</p>
+<p>HMODULE hModule = ::LoadLibrary(“dlltest.dll”);</p>
+<p>PFUN newfun = (PFUN)::GetProcAddress(hModule,”fun”);</p>
+<p>int i = newfun(1,2);</p>
+<p>printf(“The result is %d\n”,i);</p>
+<p>::FreeLibrary(hModule);</p>
+<p>}<br>然后，运行就可以看到结果了</p>
+</blockquote>
+<p><strong>转 </strong> <a href="http://blog.sina.com.cn/s/blog_4946aa22010002yn.html" title="VC6.0下调用Dll文件提供的函数接口和全局变量" target="_blank" rel="external">VC6.0下调用Dll文件提供的函数接口和全局变量</a><br>01.函数接口：<br>首先把生成的Dll文件（如RegularDll.dll和RegularDll.lib）拷贝到当前工程所在文件夹，调用有两种方法：<br>1）动态方法：<br>使用LoadLibrary和GetProcAddress等函数，例<br>typedef void (<em>lpFun)(void);<br>HINSTANCE  hDll;<br>hDll =  LoadLibrary(“RegularDll.dll”);<br>if  (NULL==hDll) {<br>MessageBox(“Dll load  failed!”);<br>}<br>lpFun  pShowDlg =  (lpFun)GetProcAddress(hDll,”ShowDlg”);<br>if  (NULL == pShowDlg) {<br>MessageBox(“Load function  \”ShowDlg\”  failed!”);<br>}<br>pShowDlg();</em>/<br>2）静态声明方法：<br>创建Dll的工程中，函数声明和定义时用  _stdcall 修饰，例<br>void  _stdcall ShowDlg(void){…}<br>在调用dll的工程的文件中，在文件头部声明库和函数，如下例</p>
+<h1 id="pragma_comment(lib,”RegularDll-lib”)">pragma comment(lib,”RegularDll.lib”)</h1><p>void  _stdcall  ShowDlg(void);<br>调用时直接ShowDlg()就可以了。<br>以上两种方法在VC6.0中调试成功，保证可用！<br>有的文章中说这样声明即可：</p>
+<h1 id="pragma_comment(lib,”RegularDll-lib”)-1">pragma comment(lib,”RegularDll.lib”)</h1><p>void ShowDlg(void);<br>但在VC6.0下会报找不到函数ShowDlg的错误，不知是不是我没有设置好？</p>
+<p>02.全局变量（访问Dll文件中的全局变量）<br>在创建Dll的工程中，在头文件中这样声明：<br>//lib.h</p>
+<h1 id="ifndef__LIB_H">ifndef _LIB_H</h1><h1 id="define__LIB_H">define _LIB_H</h1><h1 id="ifdef_DLL_FILE">ifdef DLL_FILE</h1><p>extern int  dllGlobalVar;</p>
+<h1 id="else">else</h1><p>extern int _declspec(dllimport) dllGlobalVar;</p>
+<h1 id="endif">endif</h1><p>在创建Dll的工程的cpp文件中先定义DLL_FILE，再定义该变量，如下例：<br>//lib.cpp</p>
+<h1 id="define_DLL_FILE">define DLL_FILE</h1><h1 id="include_“lib-h”">include “lib.h”</h1><p>int dllGlobalVar;  //define<br>BOOL APIENTRY DllMain(HANDLE  hModule, DWORD ul_reason_for_call, LPVOID  lpReserved)<br>{<br>switch(ul_reason_for_call) {<br>case DLL_PROCESS_ATTACH:<br>dllGlobalVar = 100;  // initialization when dll  attached<br>break;<br>……<br>}<br>int _stdcall GetGlobalVar()<br>{<br>return  dllGlobalVar;  // use the global variable<br>}<br>在调用Dll文件的工程中，需要访问该全局变量时，声明如下：</p>
+<h1 id="include_“-\lib-h”">include “..\lib.h”</h1><h1 id="pragma_comment(lib,”dllTest-lib”)">pragma  comment(lib,”dllTest.lib”)</h1><p>然后可以当作普通的全局值变量使用和修改了！<br>printf(“%d \n”, dllGlobalVar);<br>dllGlobalVar = 234;<br>printf(“%d \n”, dllGlobalVar);<br>修改会影响本工程使用的值，不过内部实现的原理还不清楚：（<br>据说还有一种方法可以访问全局变量的指针形式，不过我一直没有试通，希望高人指点！<br>如有其他问题，欢迎邮件交流！（邮件地址见公告）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gauzeehom.github.io/2011/07/22/vc-6-0-e4-b8-ad-ef-bc-8c-e5-88-9b-e5-bb-ba-e3-80-81-e8-b0-83-e7-94-a8-dll/" data-id="ci8x0xeb3000c72pvr1mrtlfp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2011/09/21/e8-bd-ac-ef-bc-9a-e5-a4-a7-e5-b9-85-e4-bc-98-e5-8c-96-myeclipse-e7-9a-84-e9-80-9f-e5-ba-a6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          转：大幅优化 myeclipse 的速度
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2011/07/15/e5-9c-a8-jsp-e9-a1-b5-e9-9d-a2-e3-80-81js-e8-84-9a-e6-9c-ac-e4-b8-ad-e8-8e-b7-e5-8f-96-e6-9c-8d-e5-8a-a1-e5-99-a8-e4-b8-8a-e7-9a-84-e9-a1-b9-e7-9b-ae-e7-9a-84-e6-a0-b9-e7-9b-ae-e5-bd-95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">在 JSP 页面、JS 脚本中获取服务器上的项目的根目录</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/学习记录/">学习记录</a><span class="category-list-count">16</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/未分类/">未分类</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/歌词/">歌词</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试目录/">测试目录</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">八月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">七月 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/06/">六月 2013</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">十二月 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">十月 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">八月 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/11/">十一月 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09/">九月 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">七月 2011</a><span class="archive-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/04/25/aboutme/">aboutme</a>
+          </li>
+        
+          <li>
+            <a href="/2015/04/25/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2013/08/21/gae-e5-ad-a6-e4-b9-a0-e7-ac-94-e8-ae-b0-ef-bc-88-e4-bb-a5-e9-83-a8-e7-bd-b2micolog-e4-b8-ba-e4-be-8b-ef-bc-89/">GAE使用（以部署micolog为例）</a>
+          </li>
+        
+          <li>
+            <a href="/2013/07/17/mpeg-x/">MPEG-x</a>
+          </li>
+        
+          <li>
+            <a href="/2013/07/08/hotsync-id-handspring-code-xxx/">Hotsync ID: Handspring Code: xxx</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 GaoZhihong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

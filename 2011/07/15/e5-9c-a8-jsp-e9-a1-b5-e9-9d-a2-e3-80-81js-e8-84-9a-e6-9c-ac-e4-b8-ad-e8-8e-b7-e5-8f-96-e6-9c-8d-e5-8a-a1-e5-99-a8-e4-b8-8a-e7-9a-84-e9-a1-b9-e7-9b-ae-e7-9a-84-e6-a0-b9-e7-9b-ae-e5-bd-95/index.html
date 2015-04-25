@@ -3,20 +3,65 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hello World | blogau</title>
+  <title>在 JSP 页面、JS 脚本中获取服务器上的项目的根目录 | blogau</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="01.页面代码：
+
+&amp;lt;%
+String basePath = request.getScheme()
+
+“://“
+
+request.getServerName()
+
+“:”
+
+request.getServerPort()
+
+request.getContextPath();
+
+
+%&amp;gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://gauzeehom.github.io/2015/04/25/hello-world/index.html">
+<meta property="og:title" content="在 JSP 页面、JS 脚本中获取服务器上的项目的根目录">
+<meta property="og:url" content="http://gauzeehom.github.io/2011/07/15/e5-9c-a8-jsp-e9-a1-b5-e9-9d-a2-e3-80-81js-e8-84-9a-e6-9c-ac-e4-b8-ad-e8-8e-b7-e5-8f-96-e6-9c-8d-e5-8a-a1-e5-99-a8-e4-b8-8a-e7-9a-84-e9-a1-b9-e7-9b-ae-e7-9a-84-e6-a0-b9-e7-9b-ae-e5-bd-95/index.html">
 <meta property="og:site_name" content="blogau">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta property="og:description" content="01.页面代码：
+
+&amp;lt;%
+String basePath = request.getScheme()
+
+“://“
+
+request.getServerName()
+
+“:”
+
+request.getServerPort()
+
+request.getContextPath();
+
+
+%&amp;gt;">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="在 JSP 页面、JS 脚本中获取服务器上的项目的根目录">
+<meta name="twitter:description" content="01.页面代码：
+
+&amp;lt;%
+String basePath = request.getScheme()
+
+“://“
+
+request.getServerName()
+
+“:”
+
+request.getServerPort()
+
+request.getContextPath();
+
+
+%&amp;gt;">
   
     <link rel="alternative" href="/atom.xml" title="blogau" type="application/atom+xml">
   
@@ -62,12 +107,16 @@ Quick">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-e5-9c-a8-jsp-e9-a1-b5-e9-9d-a2-e3-80-81js-e8-84-9a-e6-9c-ac-e4-b8-ad-e8-8e-b7-e5-8f-96-e6-9c-8d-e5-8a-a1-e5-99-a8-e4-b8-8a-e7-9a-84-e9-a1-b9-e7-9b-ae-e7-9a-84-e6-a0-b9-e7-9b-ae-e5-bd-95" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/04/25/hello-world/" class="article-date">
-  <time datetime="2015-04-25T10:51:05.415Z" itemprop="datePublished">2015-04-25</time>
+    <a href="/2011/07/15/e5-9c-a8-jsp-e9-a1-b5-e9-9d-a2-e3-80-81js-e8-84-9a-e6-9c-ac-e4-b8-ad-e8-8e-b7-e5-8f-96-e6-9c-8d-e5-8a-a1-e5-99-a8-e4-b8-8a-e7-9a-84-e9-a1-b9-e7-9b-ae-e7-9a-84-e6-a0-b9-e7-9b-ae-e5-bd-95/" class="article-date">
+  <time datetime="2011-07-15T08:18:36.000Z" itemprop="datePublished">2011-07-15</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/学习记录/">学习记录</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -76,7 +125,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      在 JSP 页面、JS 脚本中获取服务器上的项目的根目录
     </h1>
   
 
@@ -84,20 +133,40 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>01.页面代码：</p>
+<blockquote>
+<p>&lt;%</p>
+<p>String basePath = request.getScheme()</p>
+<ul>
+<li><p>“://“</p>
+</li>
+<li><p>request.getServerName()</p>
+</li>
+<li><p>“:”</p>
+</li>
+<li><p>request.getServerPort()</p>
+</li>
+<li><p>request.getContextPath();</p>
+</li>
+</ul>
+<p>%&gt;<br><a id="more"></a><br>02.脚本代码：<br>function getBasePath(){</p>
+<p>//获取当前网址，如：<a href="http://localhost:8080/prj/.../xxx.jsp" target="_blank" rel="external">http://localhost:8080/prj/.../xxx.jsp</a></p>
+<p>var fullPath=window.document.location.href;</p>
+<p>//获取主机地址之后的目录，如：/prj/…/xxx.jsp</p>
+<p>var pathName=window.document.location.pathname;</p>
+<p>//获取主机地址，如：<a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a></p>
+<p>var pos=fullPath.indexOf(pathName);</p>
+<p>var hostPath=fullPath.substring(0,pos);</p>
+<p>//获取带”/“的项目名，如：/prj</p>
+<p>var projectName=pathName.substring(0,pathName.substr(1).indexOf(‘/‘)+1);</p>
+<p>return(hostPath+projectName);</p>
+<p>}</p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://gauzeehom.github.io/2015/04/25/hello-world/" data-id="ci8x0xece000p72pv5pnpnnly" class="article-share-link">Share</a>
+      <a data-url="http://gauzeehom.github.io/2011/07/15/e5-9c-a8-jsp-e9-a1-b5-e9-9d-a2-e3-80-81js-e8-84-9a-e6-9c-ac-e4-b8-ad-e8-8e-b7-e5-8f-96-e6-9c-8d-e5-8a-a1-e5-99-a8-e4-b8-8a-e7-9a-84-e9-a1-b9-e7-9b-ae-e7-9a-84-e6-a0-b9-e7-9b-ae-e5-bd-95/" data-id="ci8x0xedn001372pvpydgf642" class="article-share-link">Share</a>
       
       
     </footer>
@@ -106,19 +175,19 @@ Quick">
     
 <nav id="article-nav">
   
-    <a href="/2015/04/25/aboutme/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2011/07/22/vc-6-0-e4-b8-ad-ef-bc-8c-e5-88-9b-e5-bb-ba-e3-80-81-e8-b0-83-e7-94-a8-dll/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          aboutme
+          VC 6.0中，创建、调用 dll
         
       </div>
     </a>
   
   
-    <a href="/2013/08/21/gae-e5-ad-a6-e4-b9-a0-e7-ac-94-e8-ae-b0-ef-bc-88-e4-bb-a5-e9-83-a8-e7-bd-b2micolog-e4-b8-ba-e4-be-8b-ef-bc-89/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2011/07/14/windows-e4-b8-8b-e6-95-b4-e5-90-88-apache-e3-80-81php-e5-92-8c-mysql/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">GAE使用（以部署micolog为例）</div>
+      <div class="article-nav-title">Windows 下整合 apache、php 和 mysql</div>
     </a>
   
 </nav>
